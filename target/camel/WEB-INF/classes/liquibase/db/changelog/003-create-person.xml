@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="003-create-person" author="elia">
+
+        <createTable tableName="person">
+
+            <column name="id" type="INT" autoIncrement="true">
+                <constraints primaryKey="true"
+                             nullable="false"/>
+            </column>
+
+            <column name="fname" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="lname" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="mname" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="dob" type="DATE"/>
+
+            <column name="gender" type="VARCHAR(20)"/>
+
+            <column name="admin_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="lastupdated" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>
